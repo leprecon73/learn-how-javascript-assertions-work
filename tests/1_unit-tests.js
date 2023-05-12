@@ -90,7 +90,7 @@ suite('Unit Tests', function () {
       assert.isArray('isThisAnArray?'.split(''), 'String.prototype.split() returns an array');
       assert.isNotArray([1, 2, 3].indexOf(2), 'indexOf returns a number');
     });
-    // #12
+    // #12 f
     test('Array #include, #notInclude', function () {
       assert.notInclude(winterMonths, 'jul', "It's summer in july...");
       assert.include(backendLanguages, 'javascript', 'JS is a backend language');
