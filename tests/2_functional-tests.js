@@ -41,7 +41,7 @@ suite('Functional Tests', function () {
         .put('/travellers')
 
         .end(function (err, res) {
-          assert.fail();
+          assert.equal(res.status, 200);
 
           done();
         });
