@@ -103,7 +103,7 @@ suite('Unit Tests', function () {
     return '# name: ' + name + ', age: ' + age + '\n';
   };
   suite('Strings', function () {
-    // #13
+    // #13 f
     test('#isString, #isNotString', function () {
       assert.isNotString(Math.sin(Math.PI / 4), 'A float is not a string');
       assert.isString(process.env.PATH, 'An env variable is a string (or undefined)');
