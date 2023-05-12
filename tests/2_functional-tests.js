@@ -60,7 +60,7 @@ suite('Functional Tests', function () {
           assert.equal(res.body.name, 'Giovanni', 'should be Giovanni');
           assert.equal(res.body.surname, 'da Verrazzano', 'should be da Verrazzano');      
 
-      done();
+          done();
     });
   });
 });
