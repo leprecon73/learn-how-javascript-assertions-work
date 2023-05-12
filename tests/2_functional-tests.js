@@ -39,9 +39,8 @@ suite('Functional Tests', function () {
         .request(server)
         .keepOpen()
         .put('/travellers')
-
         .end(function (err, res) {
-          assert.equal(res.status, 200);
+          assert.equal(res.status, 200, '200 expected');
           assert.equal(res.type, 'application/json', 'should be application/json');
           assert.equal(res.body.name, 'Cristoforo', 'should be Cristoforo');
           assert.equal(res.body.surname, 'Colombo', 'should be Colombo');
