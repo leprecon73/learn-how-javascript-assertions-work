@@ -50,19 +50,23 @@ suite('Functional Tests', function () {
     });
     // #4
     test('Send {surname: "da Verrazzano"}', function (done) {
-      chai
-        .request(server)
-        .keepOpen()
-        .put('/travellers')
-        .send({"surname": "da Verrazzano"})
-        .end(function (err, res) {
-          assert.equal(res.status, 200, '200 expected');
-          assert.equal(res.type, 'application/json', 'should be application/json');
-          assert.equal(res.body.name, 'Giovanni', 'should be Giovanni');
-          assert.equal(res.body.surname, 'da Verrazzano', 'should be da Verrazzano');      
+      
 
-          done();
-    });
+      chai
+      .request(server)
+      .keepOpen()
+      .put('/travellers')
+      .send({"surname": "da Verrazzano"})
+      .end(function (err, res) {
+        assert.equal(res.status, 200, '200 expected');
+        assert.equal(res.type, 'application/json', 'should be application/json');
+        assert.equal(res.body.name, 'Giovanni', 'should be Giovanni');
+        assert.equal(res.body.surname, 'da Verrazzano', 'should be da Verrazzano');      
+
+        done();
+
+      
+      });
   });
 });
 
