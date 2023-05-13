@@ -110,17 +110,17 @@ suite('Functional Tests with Zombie.js', function () {
     //Assert that the element(s) span#dates exist and their count is 1
     //Do not forget to remove the assert.fail() call.
     test('Submit the surname "Vespucci" in the HTML form', function (done) {
-      
-        browser.fill('surname', 'Vespucci').pressButton('submit', function () {
+      browser.fill('surname', 'Vespucci').then(() => {
+        browser.pressButton('submit', () => {
           browser.assert.success();
           browser.assert.text('span#name', 'Amerigo');
           browser.assert.text('span#surname', 'Vespucci');
           browser.assert.elements('span#dates', 1);
           done();
         });
-
-
+      });
     });
+
   });
 });
 
